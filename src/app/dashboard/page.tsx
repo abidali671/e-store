@@ -7,6 +7,7 @@ import OptionHorizontal from "../../../public/icons/OptionHorizontal";
 import Emoji from "../../../public/icons/Emoji";
 import Mic from "../../../public/icons/Mic";
 import Send from "../../../public/icons/Send";
+import SendIcon from "../../../public/icons/Send";
 const Dashboard = () => {
   return (
     <div className="bg-gray-light h-screen relative  bg-contain bg-[url('https://doot-light.react.themesbrand.com/static/media/pattern-05.ffd181cdf9a08b200998.png')]">
@@ -33,7 +34,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="chat-footer absolute bottom-10 w-full px-20">
+      <div className=" absolute bottom-6 w-full  px-20">
         <div className="flex gap-x-5 items-center ">
           <div className=" flex   gap-x-5">
             <OptionHorizontal />
@@ -52,7 +53,7 @@ const Dashboard = () => {
           <div className="flex  items-center gap-x-5">
             <Mic />
             <div className="bg-green-light text-white p-4 rounded-lg  cursor-pointer">
-              <Send />
+              <SendIcon />
             </div>
           </div>
         </div>

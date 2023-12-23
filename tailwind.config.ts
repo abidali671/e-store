@@ -20,7 +20,7 @@ const config: Config = {
       gray: {
 
         light: '#F3F3F3',
-        medium: '#495057bf',
+        medium: '#495057',
         dark: '#4eac6d1a'
       },
       green: {
@@ -28,7 +28,19 @@ const config: Config = {
       },
 
     },
+    screens: {
+      'xs': '350px',
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
 
+      'md': '900px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+
+    }
   },
   plugins: [require('tailwind-scrollbar')({ nocompatible: true }),],
 }
