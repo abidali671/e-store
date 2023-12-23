@@ -1,10 +1,6 @@
-import React, { SVGProps } from "react";
+import React from "react";
 
-interface SearchIconProps extends SVGProps<SVGSVGElement> {
-  className?: string;
-}
-
-const SearchIcon: React.FC<SearchIconProps> = ({ className, ...props }) => {
+const SearchIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +8,7 @@ const SearchIcon: React.FC<SearchIconProps> = ({ className, ...props }) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={className}
+      className="w-6 h-6 text-gray-medium"
       {...props}
     >
       <path

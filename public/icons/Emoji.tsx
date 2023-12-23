@@ -1,10 +1,6 @@
-import React, { SVGProps } from "react";
+import React from "react";
 
-interface SearchIconProps extends SVGProps<SVGSVGElement> {
-  className?: string;
-}
-
-const Emoji: React.FC<SearchIconProps> = ({ className, ...props }) => {
+const Emoji = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

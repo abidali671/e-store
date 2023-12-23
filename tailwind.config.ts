@@ -27,7 +27,8 @@ const config: Config = {
         light: '#4eac6d'
       },
 
-    }
+    },
+
   },
   plugins: [require('tailwind-scrollbar')({ nocompatible: true }),],
 }

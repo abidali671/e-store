@@ -1,13 +1,6 @@
-import React, { SVGProps } from "react";
+import React from "react";
 
-interface SearchIconProps extends SVGProps<SVGSVGElement> {
-  className?: string;
-}
-
-const OptionHorizontal: React.FC<SearchIconProps> = ({
-  className,
-  ...props
-}) => {
+const OptionHorizontal = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

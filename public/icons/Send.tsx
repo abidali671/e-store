@@ -1,10 +1,6 @@
-import React, { SVGProps } from "react";
+import React from "react";
 
-interface SearchIconProps extends SVGProps<SVGSVGElement> {
-  className?: string;
-}
-
-const Send: React.FC<SearchIconProps> = ({ className, ...props }) => {
+const SendIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,4 +20,4 @@ const Send: React.FC<SearchIconProps> = ({ className, ...props }) => {
   );
 };
 
-export default Send;
+export default SendIcon;
