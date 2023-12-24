@@ -15,7 +15,6 @@ const Sidebar: React.FC = () => {
     },
     {} as Record<string, MenuItem[]>
   );
-  console.log(groupedMenu, "#4eac6d");
 
   return (
     <div className="col-span-3 px-6 pt-6 flex flex-col gap-8 h-screen  scrollbar-thin    scrollbar-thumb-warmGray-200       overflow-y-scroll ">

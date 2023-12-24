@@ -4,8 +4,7 @@ import Sidebar from "../components/Sidebar";
 import { LayoutContext } from "../hooks/useContext";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
-  console.log(isCollapsed, "from laupt");
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <LayoutContext.Provider value={{ isCollapsed, setIsCollapsed }}>
@@ -13,13 +12,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div
           className={`md:w-3/12 w-0 ${
             isCollapsed
-              ? "flex-shrink-0 flex-grow-0 basis-full transition-all duration-150"
-              : ""
+              ? "flex-shrink-0 flex-grow-0 w-full  transition-all duration-500"
+              : " "
           }`}
         >
           <Sidebar />
         </div>
-        <div className={`md:w-9/12 w-full ${isCollapsed ? "expanded" : ""}`}>
+        <div
+          className={`md:w-9/12 w-full ${
+            isCollapsed ? "flex-1  hidden md:block" : " "
+          }`}
+        >
           {children}
         </div>
       </div>
