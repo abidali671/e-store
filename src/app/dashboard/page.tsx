@@ -9,10 +9,46 @@ import Emoji from "../../../public/icons/Emoji";
 import Mic from "../../../public/icons/Mic";
 import SendIcon from "../../../public/icons/Send";
 import { LayoutContext } from "../hooks/useContext";
+import Chat from "../components/Chat";
 
 const Dashboard = () => {
   const { isCollapsed, setIsCollapsed } = useContext(LayoutContext);
+  const messages = [
+    {
+      isCurrentUser: true,
+      message: "Good morning, How are you? What about our next meeting?",
+      senderName: "You",
+      time: "1:30pm",
+      imageUrl:
+        "https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg",
+    },
+    {
+      isCurrentUser: true,
+      message: "Good morning, How are you? What about our next meeting?",
+      senderName: "You",
+      time: "1:30pm",
+      imageUrl:
+        "https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg",
+    },
+    {
+      isCurrentUser: false,
+      message: "Good morning, How are you? What about our next meeting?",
+      senderName: "Clay",
+      time: "1:30pm",
+      imageUrl:
+        "https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg",
+    },
+    {
+      isCurrentUser: false,
+      message: "Good morning, How are you? What about our next meeting?",
+      senderName: "Clay",
+      time: "1:30pm",
+      imageUrl:
+        "https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg",
+    },
 
+    // Add more messages as needed
+  ];
   return (
     <div className="bg-gray-light   relative h-screen overflow-hidden   bg-contain bg-[url('https://doot-light.react.themesbrand.com/static/media/pattern-05.ffd181cdf9a08b200998.png')]">
       <div className="sticky top-0  z-10">
@@ -60,123 +96,8 @@ const Dashboard = () => {
       </div>
 
       {/* conversation */}
-      <div className="px-10 flex flex-col gap-y-5 h-[calc(100vh_-_192px)]    scrollbar scrollbar-w-3    scrollbar-thumb-warmGray-300 overflow-y-scroll ">
-        <div className="flex gap-x-5  ">
-          <Image
-            alt=""
-            height={50}
-            width={50}
-            className="rounded-full object-cover h-10 w-10  self-end"
-            src=" https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg"
-          />
-          <div className="flex flex-col items-start gap-y-4">
-            <p className="bg-white   p-4 px-6 text-center shadow-md rounded-md text-lg text-gray-medium">
-              Good morning 😊
-            </p>
-            <div className="flex items-center gap-x-5">
-              <h2 className="font-bold text-base text-gray-medium">
-                Marguerite Campbell
-              </h2>
-              <p className="text-gray-medium  ">1:30pm</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-x-5 ml-auto flex-row-reverse">
-          <Image
-            alt=""
-            height={50}
-            width={50}
-            className="rounded-full object-cover h-10 w-10  self-end"
-            src=" https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg"
-          />
-          <div className="flex flex-col items-start gap-y-4   ">
-            <p className="bg-[#CCE2D3]    p-4 px-6 text-right shadow-md rounded-md text-lg text-gray-medium">
-              Good morning, How are you? What about our next meeting?
-            </p>
-            <div className="flex   ml-auto gap-x-5  flex-row-reverse">
-              <h2 className="font-bold text-base text-gray-medium  ">You</h2>
-              <p className="text-gray-medium  ">1:30pm</p>
-            </div>
-          </div>
-        </div>
+      <Chat messages={messages} />
 
-        <div className="flex gap-x-5  ">
-          <Image
-            alt=""
-            height={50}
-            width={50}
-            className="rounded-full object-cover h-10 w-10  self-end"
-            src=" https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg"
-          />
-          <div className="flex flex-col items-start gap-y-4">
-            <p className="bg-white   p-4 px-6 text-center shadow-md rounded-md text-lg text-gray-medium">
-              Good morning 😊
-            </p>
-            <div className="flex items-center gap-x-5">
-              <h2 className="font-bold text-base text-gray-medium">
-                Marguerite Campbell
-              </h2>
-              <p className="text-gray-medium  ">1:30pm</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-x-5 ml-auto flex-row-reverse">
-          <Image
-            alt=""
-            height={50}
-            width={50}
-            className="rounded-full object-cover h-10 w-10  self-end"
-            src=" https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg"
-          />
-          <div className="flex flex-col items-start gap-y-4   ">
-            <p className="bg-[#CCE2D3]    p-4 px-6 text-right shadow-md rounded-md text-lg text-gray-medium">
-              Good morning, How are you? What about our next meeting?
-            </p>
-            <div className="flex   ml-auto gap-x-5  flex-row-reverse">
-              <h2 className="font-bold text-base text-gray-medium  ">You</h2>
-              <p className="text-gray-medium  ">1:30pm</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-x-5  ">
-          <Image
-            alt=""
-            height={50}
-            width={50}
-            className="rounded-full object-cover h-10 w-10  self-end"
-            src=" https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg"
-          />
-          <div className="flex flex-col items-start gap-y-4">
-            <p className="bg-white   p-4 px-6 text-center shadow-md rounded-md text-lg text-gray-medium">
-              Good morning 😊
-            </p>
-            <div className="flex items-center gap-x-5">
-              <h2 className="font-bold text-base text-gray-medium">
-                Marguerite Campbell
-              </h2>
-              <p className="text-gray-medium  ">1:30pm</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-x-5 ml-auto flex-row-reverse">
-          <Image
-            alt=""
-            height={50}
-            width={50}
-            className="rounded-full object-cover h-10 w-10  self-end"
-            src=" https://static.vecteezy.com/system/resources/previews/029/310/240/non_2x/ai-generative-happy-business-man-in-a-suit-white-transparent-background-free-photo.jpg"
-          />
-          <div className="flex flex-col items-start gap-y-4   ">
-            <p className="bg-[#CCE2D3]    p-4 px-6 text-right shadow-md rounded-md text-lg text-gray-medium">
-              Good morning, How are you? What about our next meeting?
-            </p>
-            <div className="flex   ml-auto gap-x-5  flex-row-reverse">
-              <h2 className="font-bold text-base text-gray-medium  ">You</h2>
-              <p className="text-gray-medium  ">1:30pm</p>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* conversation end */}
       <div className="chat-footer bg-gray-light h-20 sticky bottom-0    w-full py-4  xs:px-3 sm:px-8 md:px-20">
         <div className="flex justify-center items-center gap-x-2 md:gap-x-5 ">
