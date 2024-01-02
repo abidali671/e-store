@@ -14,13 +14,13 @@ const Dashboard = () => {
   const { isCollapsed, setIsCollapsed } = useContext(LayoutContext);
 
   return (
-    <div className="bg-gray-light   relative   bg-contain bg-[url('https://doot-light.react.themesbrand.com/static/media/pattern-05.ffd181cdf9a08b200998.png')]">
+    <div className="bg-gray-light   relative h-screen overflow-hidden   bg-contain bg-[url('https://doot-light.react.themesbrand.com/static/media/pattern-05.ffd181cdf9a08b200998.png')]">
       <div className="sticky top-0  z-10">
         <div className="chat-head h-28 px-5   flex items-center       backdrop-blur-3xl  ">
           <div className="flex py-3 gap-x-5 items-center  basis-full">
             <div
               className="bg-green-light p-3 cursor-pointer md:hidden block text-white"
-              onClick={() => setIsCollapsed(!isCollapsed)}
+              onClick={() => setIsCollapsed && setIsCollapsed(!isCollapsed)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const Dashboard = () => {
       </div>
 
       {/* conversation */}
-      <div className="px-10 flex flex-col gap-y-5 h-[calc(100vh_-_112px)]    scrollbar-thin    scrollbar-thumb-warmGray-300 overflow-y-scroll ">
+      <div className="px-10 flex flex-col gap-y-5 h-[calc(100vh_-_192px)]    scrollbar scrollbar-w-3    scrollbar-thumb-warmGray-300 overflow-y-scroll ">
         <div className="flex gap-x-5  ">
           <Image
             alt=""

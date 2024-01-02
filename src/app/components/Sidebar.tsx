@@ -17,7 +17,7 @@ const Sidebar: React.FC = () => {
   );
 
   return (
-    <div className="col-span-3 px-6 pt-6 flex flex-col gap-8 h-screen  scrollbar-thin    scrollbar-thumb-warmGray-200       overflow-y-scroll ">
+    <div className="col-span-3 px-6 pt-6 flex flex-col gap-8  h-screen  scrollbar-thin    scrollbar-thumb-warmGray-200       overflow-y-scroll ">
       <div className="flex justify-between   items-center ">
         <h1 className=" text-2xl font-medium font-sans">Chats</h1>
         <button className=" bg-gray-dark w-9 h-9 rounded-md font-medium text-green-light">

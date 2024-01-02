@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <LayoutContext.Provider value={{ isCollapsed, setIsCollapsed }}>
-      <div className="flex">
+      <div className="flex ">
         <div
           className={`md:w-3/12 w-0 ${
             isCollapsed
